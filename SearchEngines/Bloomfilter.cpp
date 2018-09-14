@@ -9,13 +9,14 @@ int Bloomfilter::calcHash(std::string value)
 
 Bloomfilter::Bloomfilter(int length)
 {
-	this->container = new int[length] {0};
+	this->container = new bool[length] {0};
 	this->containerLength = length;
 
 }
 
 Bloomfilter::~Bloomfilter()
 {
+	delete[] this->container;
 }
 
 void Bloomfilter::addElement(std::string str)

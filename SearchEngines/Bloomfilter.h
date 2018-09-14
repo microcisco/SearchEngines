@@ -8,7 +8,7 @@
 class Bloomfilter
 {
 private:
-	int* container;
+	bool *container = nullptr;
 	int containerLength = 0;
 
 	int calcHash(std::string);
